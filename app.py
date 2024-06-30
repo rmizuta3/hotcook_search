@@ -10,8 +10,12 @@ for words in df["word"].values:
         if word not in tags:
             tags.append(word)
 
+st.set_page_config(layout="wide")
+
+st.title("ホットクックレシピ検索")
+
 # タグを選択
-selected_tags = st.multiselect("タグを選択してください", tags)
+selected_tags = st.multiselect("使用する材料を選択してください", tags)
 #st.write("選択されたタグ:", selected_tags)
 
 # 選択されたタグが全て入っている料理の行を表示
